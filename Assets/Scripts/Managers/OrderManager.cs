@@ -5,7 +5,7 @@ public class OrderManager : MonoBehaviour
 {
     public static OrderManager Instance { get; private set;}
 
-    private string[] availableIngredients = {"Chopped_Vegetables", "Cooked_Meat", "Cheese"};
+    private string[] availableIngredients = {"Vegetable", "Meat", "Cheese"};
 
     private void Awake()
     {
@@ -32,8 +32,8 @@ public class OrderManager : MonoBehaviour
         // Score values for ingredients
         switch (ingredient)
         {
-            case "Chopped_Vegetables": return 20;
-            case "Cooked_Meat": return 30;
+            case "Vegetable": return 20;
+            case "Meat": return 30;
             case "Cheese": return 10;
             default: return 0;
         }

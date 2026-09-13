@@ -29,7 +29,7 @@ public class Table : MonoBehaviour, InteractableStation
         // Pick up chopped vegetable
         else if (isFinished && playerInteraction.heldIngredient == "")
         {
-            playerInteraction.heldIngredient = "Chopped_Vegetables";
+            playerInteraction.heldIngredient = "Vegetable";
             ResetStation();
             Debug.Log("Player picked up chopped vegetables.");
         }

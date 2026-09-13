@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Window : MonoBehaviour, InteractableStation
 {
@@ -63,6 +64,7 @@ public class Window : MonoBehaviour, InteractableStation
         // Score is the sum of ingredient values minus seconds passed
         int timePenalty = Mathf.FloorToInt(orderTimeActiveFor);
         int finalScore = currentScore - timePenalty;
+        GameManager.Instance.AddScore(finalScore);
 
         StartCoroutine(ShowPopupScore(finalScore));
         StartCoroutine(RespawnOrder());

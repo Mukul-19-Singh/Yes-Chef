@@ -29,7 +29,7 @@ public class StoveSlot : MonoBehaviour, InteractableStation
         // Pick up cooked meat
         else if (isFinished && playerInteraction.heldIngredient == "")
         {
-            playerInteraction.heldIngredient = "Cooked_Meat";
+            playerInteraction.heldIngredient = "Meat";
             Debug.Log("Player picked up cooked meat.");
             ResetSlot();
         }
