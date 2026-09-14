@@ -20,7 +20,7 @@ public class Table : MonoBehaviour, InteractableStation
     public void Interact(PlayerInteraction playerInteraction)
     {
         // Place raw vegetable on the table
-        if (!isOccupied && playerInteraction.heldIngredient == "Vegetable")
+        if (!isOccupied && playerInteraction.heldIngredient == " Vegetable")
         {
             playerInteraction.heldIngredient = "";
             StartCoroutine(ChopRoutine());

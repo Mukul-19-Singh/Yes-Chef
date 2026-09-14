@@ -20,7 +20,7 @@ public class StoveSlot : MonoBehaviour, InteractableStation
     public void Interact(PlayerInteraction playerInteraction)
     {
         // Place raw meat on the stove
-        if (!isOccupied && playerInteraction.heldIngredient == "Meat")
+        if (!isOccupied && playerInteraction.heldIngredient == " Meat")
         {
             playerInteraction.heldIngredient = "";
             StartCoroutine(CookRoutine());

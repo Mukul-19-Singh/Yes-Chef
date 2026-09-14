@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text highScoreText;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TMP_Text gameOverText;
+    [SerializeField] private Button pauseButton;
 
     private void Awake()
     {
@@ -82,6 +84,7 @@ public class GameManager : MonoBehaviour
         // timeRemaining = 0; 
         timerText.text = "00:00";
         gameOverPanel.SetActive(true);
+        pauseButton.gameObject.SetActive(false);
         // Checks and records new high score
         if (currentScore > highScore)
         {
